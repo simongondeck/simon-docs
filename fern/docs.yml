@@ -1,5 +1,5 @@
 instances:
-  - url: your-organization.docs.buildwithfern.com
+  - url: shipbob-new.docs.buildwithfern.com
 
 title: Your Organization | Docs
 
@@ -15,15 +15,15 @@ navigation:
 navbar-links: 
   - type: secondary
     text: Contact us
-    url: "mailto:support@buildwithfern.com"
+    url: "mailto:support@shipbob.com"
   - type: primary
-    text: Join the Discord
-    url: https://discord.com/invite/JkkXumPzcG
+    text: Sign in
+    url: https://web.shipbob.com/app/merchant/
 
 colors:
   accentPrimary:
-    dark: "#adff8c"
-    light: "#376d20"
+    dark: "#93c5fd"
+    light: "#1d4ed8"
 
 logo:
   dark: ./docs/assets/logo_dark_mode.png
