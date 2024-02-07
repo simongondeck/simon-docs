@@ -1,5 +1,6 @@
 instances:
   - url: shipbob.docs.buildwithfern.com
+   custom-domain: shipbobdev.com
 
 title: ShipBob | Docs
 
@@ -8,6 +9,8 @@ navigation:
     contents: 
       - page: Welcome 
         path: ./docs/pages/welcome.mdx
+      - page: Create API Token
+        path: ./docs/pages/create-api-token.mdx
       - page: SDKs
         path: ./docs/pages/sdks.mdx
   - api: API Reference
