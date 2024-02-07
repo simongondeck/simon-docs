@@ -1,7 +1,7 @@
 instances:
-  - url: shipbob-new.docs.buildwithfern.com
+  - url: shipbob.docs.buildwithfern.com
 
-title: Your Organization | Docs
+title: ShipBob | Docs
 
 navigation:
   - section: Getting started
@@ -22,12 +22,12 @@ navbar-links:
 
 colors:
   accentPrimary:
-    dark: "#93c5fd"
-    light: "#1d4ed8"
+    dark: "#0066cc"
+    light: "#0066ff"
 
 logo:
-  dark: ./docs/assets/logo_dark_mode.png
-  light: ./docs/assets/logo_light_mode.png
+  dark: ./docs/assets/dark.png
+  light: ./docs/assets/light.png
   height: 30
 
 favicon: ./docs/assets/favicon.ico
