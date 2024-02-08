@@ -13,17 +13,13 @@ navigation:
         path: ./docs/pages/concepts.mdx
       - page: Common use cases 
         path: ./docs/pages/use-cases.mdx
-  - section: Using the API
-    contents:
       - page: Authentication
-        path: ./docs/pages/authentication.mdx    
-      - page: Rate Limits
-        path: ./docs/pages/rate-limits.mdx
+        path: ./docs/pages/authentication.mdx
   - api: API Reference
 
 navbar-links:
   - type: secondary
-    text: Contact us
+    text: Support
     url: "mailto:support@shipbob.com"
   - type: primary
     text: Sign in
@@ -41,6 +37,7 @@ logo:
   dark: ./docs/assets/dark.png
   light: ./docs/assets/light.png
   height: 32
+  href: ./docs/pages/welcome.mdx
 
 favicon: ./docs/assets/favicon.ico
 

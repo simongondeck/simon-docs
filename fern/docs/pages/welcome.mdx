@@ -4,6 +4,12 @@ ShipBob is a technology-first fulfillment & storage provider for e-commerce merc
 
 There are two methods of using this API: a "Personal Access Token (PAT)" for single-merchant or custom integrations, and an OAuth 2.0 process for general-purpose integrations or those that will be listed on ShipBob's App Marketplace.
 
+## Rate Limits
+
+API calls will be rate-limited to 150 requests per-minute using a sliding window, and will be totalled per user, per application across calls to any of the Shipbob APIs.
+
+If you have questions about your limits, please email us at [developers@shipbob.com](mailto:developers@shipbob.com). We'll reply within 1-business day.
+
 ## SDKs 
 
 ShipBob offers official SDKs (client libraries) in popular programming languages. *Coming soon!*
