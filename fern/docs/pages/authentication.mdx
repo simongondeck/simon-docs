@@ -1,0 +1,28 @@
+ShipBob's Developer API allows two forms of authentication. The first is a Personal Access Token (PAT) flow, which is used for most requests. The second is a more complex OAuth2 flow, which is used for requests that require user authentication.
+
+## Personal Access Token
+
+If you're building a single-user integration, you can use the PAT method. This generates a ready-to-use bearer-type token with full access to the merchant's account.
+
+The PAT is a simple string that is passed as a query parameter in the URL. It is used for most requests to the API. Your PAT will automatically have read and write access to your entire account.
+
+```http
+bearer [your_api_token]
+```
+
+To get a Sandbox PAT, [visit this page](https://webstage.shipbob.dev/app/merchant/#/Integrations/token-management). 
+To get a Production PAT, [visit this page](https://web.shipbob.com/app/merchant/#/Integrations/token-management).
+
+## OAuth Flow 
+
+If you're building a multi-user integration, you can use the OAuth2 method. This method requires a few more steps to set up, but it allows you to request access to a merchant's account on their behalf. This is useful if you're building an app that will be used by multiple merchants.
+
+To finish the authentication process, your app will have to do the following:
+
+1. Request a client ID and client secret.
+1. Request authorization from a ShipBob user.
+1. Retrieve an authorization code from a provided callback.
+1. Exchange the authorization code for an access token.
+1. Begin making API calls.
+
+To request OAuth credentails, fill out [this form](https://forms.office.com/r/AYx81v67MD).

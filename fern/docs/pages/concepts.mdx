@@ -1,0 +1,34 @@
+When integrating with the ShipBob API, it's helpful to have an understanding of specific terminology and concepts. Below are key terms that will help you navigate and use the API.
+
+### Channel
+A ***channel*** is a specific installation of an application built by a vendor on top of our API – e.g. “Kevin’s Shopify Store #133432” would be 1 channel
+
+### Multi-channel
+A ***multi-channel*** application can read data from all channels that belong to the merchant but can only write data on behalf of its own channel - e.g. multi-channel "app #555" can read data from "Kevin's Shopify Store #133432" but can only write data on behalf of "app #555".
+
+### Reference ID
+A ***reference id*** is a required field when creating a record using one of Shipbobs Post endpoints - e.g. when creating a product via the Post products endpoint, a product reference id is required. The reference id was created to allow developers to tie records in ShipBob to their own upstream systems. Reference ids must be unique by channel.
+
+### Order
+An ***order*** is an object that comes from an external source and is intended for ShipBob to fulfill.
+
+### Shipment
+A ***shipment*** is an object that is the result of fulfillment of an order. An order can contain one or more shipments.
+
+### Product
+A ***product*** is a virtual record created in ShipBob’s system via a channel. In order to fulfill orders, product records MUST be created in ShipBob’s system. Upon creating a product, ShipBob will automatically 1 matching inventory item for that product. Via our UI, users can then add more inventory items to point to that product in order to create bundles
+
+### Inventory
+An ***inventory*** item is a representation of a physical good, that may or may not have physical stock in ShipBob’s fulfillment center. An inventory item can be related to multiple products (e.g. a merge, where multiple product records come from various channel sources but are actually the same physical good).
+
+### Bundle
+A ***bundle*** is a product that resolves to multiple inventory items. This is most commonly used for gift or multi packs. When an order is received for this product, the shipment will contain all the inventory items associated with the bundle. Note: this can currently only be done from the ShipBob UI
+
+### Merge
+A ***merge*** is a situation where multiple products (that may be from different channels) resolve to one inventory item. This is most common when merchants use ShipBob to fulfill orders from multiple platforms (e.g. Shopify and Amazon). When an order containing any of these products is sent to ShipBob, a shipment containing that inventory item will be sent out. Note: this can currently only be done from the ShipBob UI
+
+### Warehouse receiving order
+A ***warehouse receiving order (WRO)*** is an order to receive inventory into ShipBob’s fulfillment center. Some other solutions call this an “ASN” or Advanced Ship Notice. WROs may contain or multiple inventory items with specific quantities.
+
+### Return
+A ***return*** is an order to unpack returned inventory and restock, dispose, or quarantine it in ShipBob’s fulfillment center. This is the same thing as an "RMA". Returns can be optionally related to the original outbound shipment.
