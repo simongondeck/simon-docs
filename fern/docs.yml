@@ -1,5 +1,5 @@
 instances:
-  - url: shipbob-migration.docs.buildwithfern.com
+  - url: shipbob.docs.buildwithfern.com
     custom-domain: docs.shipbobdev.com
 
 title: ShipBob Developer API
