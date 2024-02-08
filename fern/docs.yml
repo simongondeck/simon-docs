@@ -1,21 +1,27 @@
 instances:
-  - url: shipbob.docs.buildwithfern.com
-   custom-domain: shipbobdev.com
+  - url: shipbob-migration.docs.buildwithfern.com
+    custom-domain: docs.shipbobdev.com
 
-title: ShipBob | Docs
+title: ShipBob Developer API
 
 navigation:
   - section: Getting started
     contents: 
       - page: Welcome 
         path: ./docs/pages/welcome.mdx
-      - page: Create API Token
-        path: ./docs/pages/create-api-token.mdx
-      - page: SDKs
-        path: ./docs/pages/sdks.mdx
+      - page: Concepts
+        path: ./docs/pages/concepts.mdx
+      - page: Common use cases 
+        path: ./docs/pages/use-cases.mdx
+  - section: Using the API
+    contents:
+      - page: Authentication
+        path: ./docs/pages/authentication.mdx    
+      - page: Rate Limits
+        path: ./docs/pages/rate-limits.mdx
   - api: API Reference
 
-navbar-links: 
+navbar-links:
   - type: secondary
     text: Contact us
     url: "mailto:support@shipbob.com"
@@ -25,12 +31,51 @@ navbar-links:
 
 colors:
   accentPrimary:
-    dark: "#0066cc"
-    light: "#0066ff"
+    light: "#175cff"
+    dark: "#477eff"
+  background:
+    light: "#ffffff"
+    dark: "#1d1d1d"
 
 logo:
   dark: ./docs/assets/dark.png
   light: ./docs/assets/light.png
-  height: 30
+  height: 32
 
 favicon: ./docs/assets/favicon.ico
+
+layout:
+  page-width: 1880px
+  header-height: 80px
+
+typography:
+  bodyFont:
+    name: Neurial Grotesk
+    paths: 
+      - path: ./docs/assets/NeurialGrotesk-Light2.woff2
+        weight: "300"
+        style: normal
+      - path: ./docs/assets/NeurialGrotesk-Regular2.woff2
+        weight: "400"
+        style: normal
+      - path: ./docs/assets/NeurialGrotesk-Medium2.woff2
+        weight: "500"
+        style: normal
+      - path: ./docs/assets/NeurialGrotesk-Bold2.woff2
+        weight: "600"
+        style: normal
+  headingsFont:
+    name: Neurial Grotesk
+    paths: 
+      - path: ./docs/assets/NeurialGrotesk-Light.woff2
+        weight: "300"
+        style: normal
+      - path: ./docs/assets/NeurialGrotesk-Regular.woff2
+        weight: "400"
+        style: normal
+      - path: ./docs/assets/NeurialGrotesk-Medium.woff2
+        weight: "500"
+        style: normal
+      - path: ./docs/assets/NeurialGrotesk-Bold.woff2
+        weight: "600"
+        style: normal

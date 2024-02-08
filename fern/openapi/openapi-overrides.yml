@@ -1,0 +1,10 @@
+# These are overrides to the existing openapi.json file
+# that are merged together before generating docs
+components: 
+  schemas: 
+    Integrations.Location.Public.Api.ViewModels.InternalLocationViewModel: 
+      x-fern-type-name: LocationViewModel
+    Integrations.Location.Public.Api.ViewModels.InternalLocationViewModelV2: 
+      x-fern-type-name: LocationViewModel2
+servers:
+  - url: https://api.shipbob.com

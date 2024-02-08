@@ -1,0 +1,13 @@
+The ShipBob API supports a variety of different use cases. A typical integration will use the following endpoints:
+
+Order `POST` – to create orders in ShipBob.
+
+Order `GET` – to fetch tracking details from ShipBob if you want to take a polling/scheduled based approach. You can also subscribe to our webhooks if you’d like to automatically receive shipment events.
+
+Inventory `GET` – this allows you to fetch inventory levels across ShipBob’s facility network. This endpoint will return per-facility inventory levels as well as aggregated inventory levels across the network.
+
+The following inventory quantity calculations are available:
+
+* ***On hand quantities*** are everything currently stocked at the warehouse.
+* ***Fulfillable quantities*** are everything stocked at the warehouse minus quantities committed to orders.
+* ***Sellable quantities*** are everything stocked at the warehouse, minus quantities committed to orders, minus any exception orders. This calculation is only available at a network-wide level.
